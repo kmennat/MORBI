@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register Now - Dream Team</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+
+        /* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 0px 3px 22px #0000000F;
+    padding: 20px 40px;
+    border-bottom: 1px solid #e1e5e9;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+}
+
+.logo-text {
+    color: #333;
+}
+
+.logo-icon {
+    background-color: #00CC7E;
+    color: white;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    margin: 0 2px;
+    font-size: 20px;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-outline {
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    background: white;
+    color: #333;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background-color: #f8f9fa;
+    border-color: #00CC7E;
+}
+
+.btn-primary {
+    padding: 10px 20px;
+    background-color: #00CC7E;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #00CC7E;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+    background-color: white;
+    border-top: 1px solid #e1e5e9;
+}
+
+.footer-links {
+    display: flex;
+    gap: 30px;
+}
+
+.footer-links a {
+    text-decoration: none;
+color: var(--unnamed-color-000000);
+text-align: left;
+font: normal normal medium 16px/19px Roboto;
+letter-spacing: 0px;
+color: #000000;    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #00CC7E;
+}
+
+.language-selector {
+    padding: 8px 22px;
+    border: 2px solid var(--unnamed-color-000000);
+border: 2px solid #000000;
+border-radius: 7px;
+    background: white;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Bottom Footer */
+.bottom-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+   background: var(--unnamed-color-000000) 0% 0% no-repeat padding-box;
+background: #000000 0% 0% no-repeat padding-box;
+    color: white;
+}
+
+.copyright {
+    font-size: 14px;
+    color: #fff;
+}
+
+.bottom-links {
+    display: flex;
+    gap: 20px;
+}
+
+.bottom-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.bottom-links a:hover {
+    color: white;
+}
+
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            gap: 60px;
+            align-items: flex-start;
+        }
+
+        .form-section {
+            flex: 1;
+            max-width: 500px;
+        }
+
+        .hero-section {
+            flex: 1;
+            text-align: center;
+            padding-top: 80px;
+        }
+
+        .form-title {
+            font-size: 28px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+
+        .form-subtitle {
+            font-size: 16px;
+            color: #6c757d;
+            margin-bottom: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 15px;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid var(--unnamed-color-000000);
+border: 2px solid #000000;
+            border-radius: 8px;
+            font-size: 16px;
+            background-color: white;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        input[type="password"]:focus {
+            outline: none;
+            border-color: #00CC7E;
+        }
+
+        input::placeholder {
+            color: #6c757d;
+            font-size: 16px;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 25px 0;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #00CC7E;
+        }
+
+        .checkbox-group label {
+            font-size: 14px;
+            color: #6c757d;
+            cursor: pointer;
+        }
+
+        .register-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: #00CC7E;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .register-btn:hover {
+            background-color: #1ba085;
+        }
+
+        .hero-title {
+            font-size: 48px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            text-align: right;
+        }
+
+        .highlight {
+            color: #00CC7E;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .header {
+        padding: 15px 20px;
+    }
+    
+    .logo {
+        font-size: 24px;
+    }
+    
+    .logo-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+    }
+    
+    .auth-buttons {
+        gap: 8px;
+    }
+    
+    .btn-outline,
+    .btn-primary {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+    
+    .main-content {
+        flex-direction: column;
+        min-height: auto;
+    }
+    
+    .form-section {
+        padding: 40px 20px;
+    }
+    
+    .form-container h1 {
+        font-size: 28px;
+    }
+    
+    .marketing-section {
+        padding: 40px 20px;
+    }
+    
+    .marketing-content h2 {
+        font-size: 32px;
+    }
+    
+    .footer {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    .footer-links {
+        gap: 20px;
+    }
+    
+    .bottom-footer {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+            .container {
+                flex-direction: column;
+                gap: 40px;
+                padding: 20px 15px;
+            }
+
+            .hero-section {
+                order: -1;
+                padding-top: 20px;
+            }
+
+            .form-section {
+                max-width: 100%;
+            }
+
+            .form-row {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .hero-title {
+                font-size: 36px;
+            }
+
+            .form-title {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+             .header {
+        padding: 12px 15px;
+    }
+    
+    .logo {
+        font-size: 20px;
+    }
+    
+    .logo-icon {
+        width: 26px;
+        height: 26px;
+        font-size: 16px;
+    }
+    
+    .form-section {
+        padding: 30px 15px;
+    }
+    
+    .form-container {
+        max-width: 100%;
+    }
+    
+    .form-container h1 {
+        font-size: 24px;
+    }
+    
+    .subtitle {
+        font-size: 14px;
+    }
+    
+    .input-group input {
+        padding: 14px 16px;
+        font-size: 14px;
+    }
+    
+    .marketing-content h2 {
+        font-size: 24px;
+    }
+    
+    .footer-links {
+        flex-wrap: wrap;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .footer-links a {
+        font-size: 13px;
+    }
+            .hero-title {
+                font-size: 28px;
+            }
+
+            .form-title {
+                font-size: 22px;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="tel"],
+            input[type="password"] {
+                font-size: 16px;
+                padding: 14px 16px;
+            }
+        }
+        .logo {
+    /* font-size: 24px; */
+    width: 50px;
+    font-weight: bold;
+    color: #333;
+}
+
+.logo-img {
+    /* font-size: 24px; */
+    width: 180px;
+   height: 50px;
+    object-fit: cover;
+}
+    </style>
+</head>
+<body>
+
+       <!-- Header -->
+        <header class="header">
+            <div class="logo">
+        <img src="logo.png" alt="Logo" class="logo-img">
+    </div>
+            <div class="auth-buttons">
+                <button class="btn-outline">log in</button>
+                <button class="btn-primary">register</button>
+            </div>
+        </header>
+
+
+    <div class="container">
+        <div class="form-section">
+            <h1 class="form-title">Register now</h1>
+            <p class="form-subtitle">And become part of our team</p>
+            
+            <form>
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" placeholder="First name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Last name" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" placeholder="Username" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="tel" placeholder="Phone" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="E-mail" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="password" placeholder="Password" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="Confirm password" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" placeholder="Address Line 1" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" placeholder="Address Line 2">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" placeholder="State" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="City" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Zip code" required>
+                    </div>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">I have read the terms and conditions</label>
+                </div>
+
+                <button type="submit" class="register-btn">register</button>
+            </form>
+        </div>
+
+        <div class="hero-section">
+            <h2 class="hero-title">
+                Connect with the<br>
+                best to create<br>
+                your <span class="highlight">dream team</span>
+            </h2>
+        </div>
+    </div>
+
+
+     <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-links">
+                <a href="#">AGB</a>
+                <a href="#">Impressum</a>
+                <a href="#">MORBI group</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="footer-right">
+                <select class="language-selector">
+                    <option>EN</option>
+                    <option>DE</option>
+                </select>
+            </div>
+        </footer>
+
+        <!-- Bottom Footer -->
+        <div class="bottom-footer">
+            <div class="copyright">© MORBI 2021</div>
+            <div class="bottom-links">
+                <a href="#">GTC</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+</body>
+</html>

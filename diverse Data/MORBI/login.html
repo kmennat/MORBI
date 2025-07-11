@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MORBI - Sign Up</title>
+        <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+           <div class="logo">
+        <img src="logo.png" alt="Logo" class="logo-img">
+    </div>
+            <div class="auth-buttons">
+                <button class="btn-outline">log in</button>
+                <button class="btn-primary">register</button>
+            </div>
+        </header>
+<div class="login-wrap">
+        <!-- Login form -->
+
+          <div class="login-container">
+        <div class="login-form">
+            <h2>Log in</h2>
+            <form>
+                <div class="input-group">
+                    <input type="text" id="username" name="username" placeholder="Username" required>
+                </div>
+                <div class="input-group password-group">
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                    <span class="eye-icon">👁</span>
+                </div>
+                <div class="forgot-password">
+                    <a href="#">Forgot password?</a>
+                </div>
+                <button type="submit" class="login-btn">log in</button>
+            </form>
+        </div>
+    </div>
+</div>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-links">
+                <a href="#">AGB</a>
+                <a href="#">Impressum</a>
+                <a href="#">MORBI group</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="footer-right">
+                <select class="language-selector">
+                    <option>EN</option>
+                    <option>DE</option>
+                </select>
+            </div>
+        </footer>
+
+        <!-- Bottom Footer -->
+        <div class="bottom-footer">
+            <div class="copyright">© MORBI 2021</div>
+            <div class="bottom-links">
+                <a href="#">GTC</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Password toggle functionality
+        document.querySelector('.password-toggle').addEventListener('click', function() {
+            const passwordInput = document.querySelector('input[type="password"]');
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+            this.textContent = type === 'password' ? '👁' : '🙈';
+        });
+    </script>
+</body>
+</html>
