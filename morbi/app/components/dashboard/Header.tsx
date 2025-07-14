@@ -44,7 +44,7 @@ export default function Header({ onMenuToggle }: HeaderProps) {
             <input
               type="text"
               placeholder="search"
-              className={`w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent ${
+              className={`w-full pl-10 text-[#000] pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent ${
                 isSearchFocused ? 'border-green-500' : 'border-gray-300'
               }`}
               onFocus={() => setIsSearchFocused(true)}
