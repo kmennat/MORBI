@@ -8,6 +8,7 @@ import Dashboard from './views/auth/Dashboard';
 import Logout from './views/auth/logout';
 import ForgotPassword from './views/auth/ForgotPassword';
 import CreatePassword from './views/auth/CreatePassword';
+import { SignupForm } from './views/auth/signup';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,6 +17,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/login' element={<Login />} />
+        <Route path='/signup' element={<SignupForm />} />
         <Route path='/register' element={<Register />} />
         <Route path='/logout' element={<Logout />} />
         <Route path='/' element={<Dashboard />} />
